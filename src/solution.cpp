@@ -1,5 +1,6 @@
 #include "solution.h"
 #include <stack>
+#include <cstring>
 
 using namespace std;
 
@@ -15,7 +16,9 @@ bool isCorrect(const char* expression)
 {
 	stack<char> temp;
 
-	for (int i = 0; i < strlen(expression); i++)
+	int length = strlen(expression);
+
+	for (int i = 0; i < length; i++)
 	{
 		if (expression[i] == '(' || expression[i] == '{' || expression[i] == '[')
 			temp.push(expression[i]);
